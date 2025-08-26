@@ -1,15 +1,24 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { navItems } from "@/data";
-import { SpotlightPreview } from "@/components/Spooot";
-import { Hero } from "@/components/Hero";
-import Grid from "@/components/Grid";
+// import { SpotlightPreview } from "@/components/Spooot"; // Adjust path as needed// import { Hero } from "@/components/Hero";
+// import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
+
+const SpotlightPreview = dynamic(() =>
+  import("@/components/Spooot").then(mod => mod.SpotlightPreview),
+  { ssr: false }
+);
+const Grid = dynamic(() =>
+  import("@/components/Grid").then(mod => mod.default),
+  { ssr: false }
+);
 
 const Home = () => {
   return (
@@ -20,8 +29,8 @@ const Home = () => {
 
           {/* About section */}
           <section id="about">
-            <SpotlightPreview />
-            <Grid />
+             <SpotlightPreview /> 
+            <Grid /> 
           </section>
 
           {/* Projects section */}

@@ -1,3 +1,6 @@
+
+
+
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -76,6 +79,7 @@ const Approach = () => {
     dotSize={2}
   />
 </Card>
+
 
       </div>
     </section>

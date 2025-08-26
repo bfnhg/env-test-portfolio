@@ -1,3 +1,6 @@
+
+"use client";
+
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
@@ -11,6 +14,10 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import dynamic from "next/dynamic";
+
+// Dynamically import SpotlightPreview with SSR disabled
+const SpotlightPreview = dynamic(() => import("@/components/Spooot").then(mod => mod.SpotlightPreview), { ssr: false });
 
 export const BentoGrid = ({
   className,
