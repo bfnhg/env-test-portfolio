@@ -88,7 +88,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
+    title: "AI Image SaaS ",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
@@ -96,7 +96,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Agafay Gateway – Excursions & Tourist Activities in Marrakech",
+    title: "Agafay Gateway",
     des: "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech. It offers an authentic and immersive experience through curated excursions, tourist activities, and themed stays in a stunning natural setting",
     img: "/agafay.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
@@ -207,19 +207,32 @@ export const workExperience = [
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
+  {
+    id: 5,
+    title: "Media Buyer & Digital Marketing Specialist",
+    desc: "Managed multi-platform advertising campaigns across Facebook, Google Ads, and TikTok, optimizing ROI through data-driven targeting and creative testing to achieve 300% increase in conversion rates",
+    className: "md:col-span-2",
+    thumbnail: "/exp2.svg",
+  },
 ];
 
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
-  },
-];
+
+  export const socialMedia = [
+    {
+      id: 1,
+      img: "/git.svg",
+      link: "https://github.com/bfnhg",
+    },
+    {
+      id: 2,
+      img: "/twit.svg",
+      link: "https://twitter.com/yourusername", // Please replace with your Twitter/X URL
+    },
+    
+    {
+      id: 4,
+      img: "/insta.svg", // Added Instagram
+      link: "https://www.instagram.com/getyourwebsite2?igsh=N3VtMG13Z2g4a25s&utm_source=qr",
+    },
+  ]
+
