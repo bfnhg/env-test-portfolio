@@ -8,6 +8,8 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export const FloatingNav = ({
   navItems,
@@ -21,9 +23,38 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
+  const { i18n, t } = useTranslation();
 
   // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const languages: { code: string; label: string }[] = [
+    { code: 'fr', label: 'Français' },
+    { code: 'en', label: 'English' },
+    { code: 'ar', label: 'العربية' },
+  ];
+
+  // Fermer le dropdown si on clique en dehors
+  React.useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    }
+    if (dropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownOpen]);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -82,9 +113,60 @@ export const FloatingNav = ({
             <span className="block sm:hidden">{navItem.icon}</span>
             {/* add !cursor-pointer */}
             {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className=" text-sm !cursor-pointer">{t(navItem.name)}</span>
           </Link>
         ))}
+        {/* Dropdown de langue */}
+        <div className="relative ml-4" ref={dropdownRef}>
+          <button
+            onClick={() => setDropdownOpen((open) => !open)}
+            className="flex items-center px-3 py-2 rounded-md bg-white/10 hover:bg-white/20 text-white text-sm focus:outline-none"
+          >
+            {/* Icône globe pour la langue */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 3c2.755 0 5.5 2.245 5.5 5.5S14.755 14 12 14s-5.5-2.245-5.5-5.5S9.245 3 12 3zm0 0v18m0-18C7.245 3 3 7.245 3 12s4.245 9 9 9 9-4.245 9-9-4.245-9-9-9z"
+              />
+            </svg>
+            <span className="ml-2 uppercase">{(i18n.language || 'en').slice(0,2)}</span>
+            <svg
+              className={`ml-1 w-4 h-4 transition-transform ${dropdownOpen ? "rotate-0" : "rotate-180"}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          {dropdownOpen && (
+            <div className="absolute right-0 top-full w-32 bg-white rounded-md shadow-lg z-50">
+              <ul className="py-1 text-gray-700">
+                {languages.map((lang) => (
+                  <li
+                    key={lang.code}
+                    className={`px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center ${i18n.language && i18n.language.startsWith(lang.code) ? 'font-bold text-blue-600' : ''}`}
+                    onClick={() => {
+                      i18n.changeLanguage(lang.code);
+                      setDropdownOpen(false);
+                    }}
+                  >
+                    {lang.label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
         {/* remove this login btn */}
         {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>Login</span>

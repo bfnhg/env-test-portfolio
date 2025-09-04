@@ -2,8 +2,11 @@
 
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
+import { useTranslation } from "react-i18next";
 
 const Grid = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="about">
       <BentoGrid className="w-full py-20">
@@ -11,8 +14,8 @@ const Grid = () => {
           <BentoGridItem
             id={item.id}
             key={i}
-            title={item.title}
-            description={item.description}
+            title={t(item.title)}
+            description={item.description ? t(item.description) : item.description}
             // remove icon prop
             // remove original classname condition
             className={item.className}

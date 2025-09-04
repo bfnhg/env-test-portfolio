@@ -73,7 +73,7 @@ export const projects = [
   {
     id: 1,
     title: "Bleusky",
-    des: "BleuSky est la solution pour PME qui vous permet de mesurer etde planifier les risques afin d’assurer votre succès. C'est un outil de gestion des budgets, dans toutes les dimensions de votre entreprise, afin d'avoir une vision globale de la performance de votre PME.",
+    des: "BleuSky est la solution pour PME qui vous permet de mesurer et de planifier les risques afin d’assurer votre succès.",
     img: "/BBL.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://www.linkedin.com/showcase/bleusky-software/about/",
@@ -81,7 +81,7 @@ export const projects = [
   {
     id: 2,
     title: "QResto PRO SaaS",
-    des: "QResto Pro est un SaaS de gestion restaurant au Maroc, conçu pour les cafés, snacks, pizzerias et restaurants de toutes tailles",
+    des: "QResto Pro est un SaaS de gestion restaurant au Maroc, conçu pour les cafés, snacks, pizzerias et restaurants ",
     img: "/qrestopro.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "https://www.qresto.pro/",
@@ -97,7 +97,7 @@ export const projects = [
   {
     id: 4,
     title: "Agafay Gateway",
-    des: "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech. It offers an authentic and immersive experience through curated excursions, tourist activities, and themed stays in a stunning natural setting",
+    des: "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech.",
     img: "/agafay.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",

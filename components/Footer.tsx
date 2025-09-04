@@ -1,9 +1,13 @@
 import { FaLocationArrow } from "react-icons/fa6";
+import { useTranslation } from 'react-i18next'
+
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 
+
 const Footer = () => {
+   const { i18n ,t} = useTranslation()
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       {/* background grid */}
@@ -35,7 +39,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
   <p className="md:text-base text-sm md:font-normal font-light">
-    Copyright © 2025 ADHAM
+    {t("Copyright")}
   </p>
 
   <div className="flex items-center md:gap-3 gap-6">

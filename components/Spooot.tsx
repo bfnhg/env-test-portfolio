@@ -5,10 +5,12 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "./ui/Spotlight";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 // import ContactPopup from "./ContactPopup"; // Regular import since page is client-side
 
 export function SpotlightPreview() {
   const router = useRouter();
+  const { t } = useTranslation();
 
   const handleViewProjects = () => {
     router.push("/#projects");
@@ -56,16 +58,16 @@ export function SpotlightPreview() {
           {/* Name and Title */}
           <div className="text-center">
             <h2 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl font-bold text-transparent md:text-7xl mt-2">
-              Hey, I&apos;m Adham
+              {t("Hey, I'm Adham")}
             </h2>
             <h3 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl font-bold text-transparent md:text-7xl mt-2">
-              a Software Engineer, Based in Morocco
+              {t("a Software Engineer, Based in Morocco")}
             </h3>
             <span className="inline-block align-middle text-4xl md:text-5xl">🇲🇦</span>
             <div className="mt-3 flex items-center justify-center space-x-3">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-neutral-400"></div>
               <p className="text-xl font-medium text-neutral-300 md:text-2xl">
-                JS Master
+                {t("JS Master")}
               </p>
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-neutral-400"></div>
             </div>
@@ -74,8 +76,7 @@ export function SpotlightPreview() {
           {/* Description */}
           <div className="max-w-3xl text-center">
             <p className="text-lg font-normal leading-relaxed text-neutral-300 md:text-xl">
-              Passionate about crafting exceptional user experiences through modern web technologies.
-              I transform ideas into interactive, responsive, and performant web applications.
+              {t("Passionate about crafting exceptional user experiences through modern web technologies. I transform ideas into interactive, responsive, and performant web applications.")}
             </p>
           </div>
 
@@ -99,7 +100,7 @@ export function SpotlightPreview() {
             >
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                View Projects
+                {t("View Projects")}
               </span>
             </button>
             {/* <ContactPopup /> */}
