@@ -2,12 +2,16 @@ import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import { useTranslation } from "react-i18next";
+
 
 const Experience = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="py-20 w-full">
       <h1 className="heading">
-        My <span className="text-purple">work experience</span>
+        {t("My")} <span className="text-purple">{t("work experience")}</span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -37,10 +41,13 @@ const Experience = () => {
               />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
+                  {/* {card.title} */}
+               {t(card.title)}
+
                 </h1>
                 <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
+                  {/* {card.desc} */}
+                  {t(card.desc)}
                 </p>
               </div>
             </div>

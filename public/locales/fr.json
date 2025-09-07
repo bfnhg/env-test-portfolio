@@ -57,6 +57,27 @@
   "Model name": "Nom du modèle",
   "Waranty period": "Période de garantie",
   "Model number": "Numéro du modèle",
+  "Let’s bring your next idea to life — ready to build something amazing together?": "Donnons vie à votre prochaine idée — prêt à construire quelque chose d'incroyable ensemble ?",
+  "Frontend Engineer": "Ingénieur Frontend",
+  "Contributed to the development of interactive web applications using React.js, improving user experience.": "Contribué au développement d'applications web interactives en utilisant React.js, améliorant l'expérience utilisateur.",
+  "Agile Principle Reworded for Dev Roles": "Principes Agiles Reformulés pour les Rôles de Développement",
+  "Applied Scrum methodology with sprint planning, daily standups, and iterative development cycles to deliver features efficiently while maintaining code quality through continuous integration": "Application de la méthodologie Scrum avec planification de sprint, stand-ups quotidiens et cycles de développement itératifs pour livrer des fonctionnalités efficacement tout en maintenant la qualité du code grâce à l'intégration continue",
+  "Emerging Technologies-AI Integration": "Technologies Émergentes-Intégration IA",
+  "Building intelligent applications using machine learning APIs, ChatGPT integration, computer vision, and voice recognition to create smart, automated user experiences": "Développement d'applications intelligentes utilisant des APIs d'apprentissage automatique, l'intégration ChatGPT, la vision par ordinateur et la reconnaissance vocale pour créer des expériences utilisateur intelligentes et automatisées",
+  "Full-Stack Integration-Complete Application Development": "Intégration Full-Stack-Développement d'Applications Complètes",
+  "End-to-end development from concept to deployment, including backend API creation, modern user interfaces, database management, and production hosting on cloud platforms for fully functional applications": "Développement de bout en bout du concept au déploiement, incluant la création d'APIs backend, des interfaces utilisateur modernes, la gestion de base de données et l'hébergement en production sur des plateformes cloud pour des applications entièrement fonctionnelles",
+  "Media Buyer & Digital Marketing Specialist": "Acheteur de Médias & Spécialiste Marketing Digital",
+  "Managed multi-platform advertising campaigns across Facebook, Google Ads, and TikTok, optimizing ROI through data-driven targeting and creative testing to achieve 300% increase in conversion rates": "Gestion de campagnes publicitaires multi-plateformes sur Facebook, Google Ads et TikTok, optimisation du ROI grâce au ciblage basé sur les données et aux tests créatifs pour atteindre une augmentation de 300% des taux de conversion",
+  "work experience": "expérience professionnelle",
+  "My": "Mon",
+  "Kind words from": "Paroles bienveillantes de",
+  "satisfied clients": "clients satisfaits",
+  "Adham is highly professional, responsive, and passionate about delivering quality results. He's the perfect partner to elevate your website and brand": "Adham est très professionnel, réactif et passionné par la livraison de résultats de qualité. Il est le partenaire parfait pour élever votre site web et votre marque",
+  "Conseiller Sénior ITSM": "Conseiller Sénior ITSM",
+  "Adham is a true professional—responsive, passionate, and committed to delivering outstanding results. He's the perfect partner to elevate your website and brand.": "Adham est un vrai professionnel—réactif, passionné et engagé à livrer des résultats exceptionnels. Il est le partenaire parfait pour élever votre site web et votre marque.",
+  "Auteur | Entrepreneur, Président de SIRIUS Conseils, Expert en Agilité & Gestion de projets & Intelligence Artificielle | Doctorant en administration des affaires (IA) | Membre du collectif Agilience pour PME": "Auteur | Entrepreneur, Président de SIRIUS Conseils, Expert en Agilité & Gestion de projets & Intelligence Artificielle | Doctorant en administration des affaires (IA) | Membre du collectif Agilience pour PME",
+  "Working with Adham was a real pleasure. His professionalism, responsiveness, and dedication to delivering high-quality results made a strong impression throughout our collaboration. His passion for development shines through in every detail. If you're looking to take your website and brand to the next level, Adham is the ideal partner.": "Travailler avec Adham a été un vrai plaisir. Son professionnalisme, sa réactivité et son dévouement à livrer des résultats de haute qualité ont fait une forte impression tout au long de notre collaboration. Sa passion pour le développement transparaît dans chaque détail. Si vous cherchez à faire passer votre site web et votre marque au niveau supérieur, Adham est le partenaire idéal.",
+  "Chef de projet / Scrum master": "Chef de projet / Scrum master",
    "Copyright":"Droit d'acces adham 2025",
   "Class": "Classe",
   "About": "À propos",
@@ -86,6 +107,12 @@
   "AI Image SaaS": "AI Image SaaS",
   "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.": "Une vraie application Software-as-a-Service avec des fonctionnalités IA et un système de paiements et crédits utilisant la dernière stack technologique.",
   "Agafay Gateway": "Agafay Gateway",
-  "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech.": "Agafay Gateway est un projet axé sur la promotion du désert d'Agafay, situé juste à l'extérieur de Marrakech."
+  "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech.": "Agafay Gateway est un projet axé sur la promotion du désert d'Agafay, situé juste à l'extérieur de Marrakech.",
+  "Frontend Engineer Intern":"Frontend Engineer Intern",
+  "Adham is highly professional": "Adham est hautement professionnel, réactif et passionné par la livraison de résultats de qualité. Il est le partenaire idéal pour sublimer votre site web et votre marque.",
+  "Working with Adham": "Travailler avec Adham a été un vrai plaisir. Son professionnalisme, sa réactivité et son dévouement à livrer des résultats de haute qualité ont fait une forte impression tout au long de notre collaboration. Sa passion pour le développement transparaît dans chaque détail. Si vous cherchez à faire passer votre site web et votre marque au niveau supérieur, Adham est le partenaire idéal.",
+
+  "Adham is a true":"Adham est un vrai professionnel—réactif, passionné et engagé à livrer des résultats exceptionnels. Il est le partenaire idéal pour sublimer votre site web et votre marque."
+
  
 }

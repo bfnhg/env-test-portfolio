@@ -10,6 +10,9 @@
   "Projects": "Projects",
   "Testimonials": "Testimonials",
   "Contact": "Contact",
+  "Frontend Engineer": "Frontend Engineer",
+  "Agile Principle Reworded for Dev Roles": "Agile Principle Reworded for Dev Roles",
+  "Contributed to the development of interactive web applications using React.js, improving user experience.": "Contributed to the development of interactive web applications using React.js, improving user experience.",
   "Hey, I'm Adham": "Hey, I'm Adham",
   "a Software Engineer, Based in Morocco": "a Software Engineer, Based in Morocco",
   "JS Master": "JS Master",
@@ -33,5 +36,28 @@
   "AI Image SaaS": "AI Image SaaS",
   "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.": "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
   "Agafay Gateway": "Agafay Gateway",
-  "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech.": "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech."
+  "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech.": "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech.",
+  "Frontend Engineer Intern":"Frontend Engineer Intern",
+  "Applied Scrum methodology with sprint planning, daily standups, and iterative development cycles to deliver features efficiently while maintaining code quality through continuous integration": "Applied Scrum methodology with sprint planning, daily standups, and iterative development cycles to deliver features efficiently while maintaining code quality through continuous integration",
+  "Emerging Technologies-AI Integration": "Emerging Technologies-AI Integration",
+  "Building intelligent applications using machine learning APIs, ChatGPT integration, computer vision, and voice recognition to create smart, automated user experiences": "Building intelligent applications using machine learning APIs, ChatGPT integration, computer vision, and voice recognition to create smart, automated user experiences",
+  "Full-Stack Integration-Complete Application Development": "Full-Stack Integration-Complete Application Development",
+  "End-to-end development from concept to deployment, including backend API creation, modern user interfaces, database management, and production hosting on cloud platforms for fully functional applications": "End-to-end development from concept to deployment, including backend API creation, modern user interfaces, database management, and production hosting on cloud platforms for fully functional applications",
+  "Media Buyer & Digital Marketing Specialist": "Media Buyer & Digital Marketing Specialist",
+  "Managed multi-platform advertising campaigns across Facebook, Google Ads, and TikTok, optimizing ROI through data-driven targeting and creative testing to achieve 300% increase in conversion rates": "Managed multi-platform advertising campaigns across Facebook, Google Ads, and TikTok, optimizing ROI through data-driven targeting and creative testing to achieve 300% increase in conversion rates",
+  "work experience": "work experience",
+  "My": "My",
+  "Kind words from": "Kind words from",
+  "satisfied clients": "satisfied clients",
+  "Adham is highly professional, responsive, and passionate about delivering quality results. He's the perfect partner to elevate your website and brand": "Adham is highly professional, responsive, and passionate about delivering quality results. He's the perfect partner to elevate your website and brand",
+  "Conseiller Sénior ITSM": "Senior ITSM Advisor",
+  "Adham is a true professional—responsive, passionate, and committed to delivering outstanding results. He's the perfect partner to elevate your website and brand.": "Adham is a true professional—responsive, passionate, and committed to delivering outstanding results. He's the perfect partner to elevate your website and brand.",
+  "Auteur | Entrepreneur, Président de SIRIUS Conseils, Expert en Agilité & Gestion de projets & Intelligence Artificielle | Doctorant en administration des affaires (IA) | Membre du collectif Agilience pour PME": "Author | Entrepreneur, President of SIRIUS Conseils, Expert in Agility & Project Management & Artificial Intelligence | PhD in Business Administration (AI) | Member of the Agilience collective for SMEs",
+  "Working with Adham": "Working with Adham was a real pleasure. His professionalism, responsiveness, and dedication to delivering high-quality results made a strong impression throughout our collaboration. His passion for development shines through in every detail. If you're looking to take your website and brand to the next level, Adham is the ideal partner.",
+  "Chef de projet / Scrum master": "Project Manager / Scrum Master",
+  "Adham is a true":"Adham is a true professional—responsive, passionate, and committed to delivering outstanding results. He’s the perfect partner to elevate your website and brand.",
+
+
+  "Adham is highly professional": "Adham is highly professional, responsive, and passionate about delivering quality results. He’s the perfect partner to elevate your website and brand"
 }
+

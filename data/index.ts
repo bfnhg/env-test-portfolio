@@ -106,13 +106,13 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote:"Adham is highly professional, responsive, and passionate about delivering quality results. He’s the perfect partner to elevate your website and brand",   
+  quote:"Adham is highly professional",   
    name: "Yvon Day ",
     title: "Conseiller Sénior ITSM",
     img: "/yvon.jpeg",
   },
   {
-    quote:"Adham is a true professional—responsive, passionate, and committed to delivering outstanding results. He’s the perfect partner to elevate your website and brand.",
+    quote:"Adham is a true",
     name: "Benoît Godbout",
     img: "/benoit.jpeg",
     title: "Auteur | Entrepreneur, Président de SIRIUS Conseils, Expert en Agilité & Gestion de projets & Intelligence Artificielle | Doctorant en administration des affaires (IA) | Membre du collectif Agilience pour PME",
@@ -174,8 +174,8 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Engineer",
+    desc: "Contributed to the development of interactive web applications using React.js, improving user experience.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -196,14 +196,14 @@ export const workExperience = [
   {
     id: 3,
     title: "Emerging Technologies-AI Integration",
-    desc: "  Building intelligent applications using machine learning APIs, ChatGPT integration, computer vision, and voice recognition to create smart, automated user experiences",
+    desc: "Building intelligent applications using machine learning APIs, ChatGPT integration, computer vision, and voice recognition to create smart, automated user experiences",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
     title: "Full-Stack Integration-Complete Application Development",
-    desc: " End-to-end development from concept to deployment, including backend API creation, modern user interfaces, database management, and production hosting on cloud platforms for fully functional applications",
+    desc: "End-to-end development from concept to deployment, including backend API creation, modern user interfaces, database management, and production hosting on cloud platforms for fully functional applications",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
