@@ -9,6 +9,7 @@ import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
+import Contact from "@/components/Contact";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
 const SpotlightPreview = dynamic(() =>
@@ -47,11 +48,14 @@ const Home = () => {
           {/* Experience (you could attach to 'about' or keep separate) */}
           <Experience />
 
+          {/* Approach section */}
+          <Approach />
+
           {/* Contact section */}
-          <section id="contact">
-            <Approach />
-            <Footer />
-          </section>
+          <Contact />
+
+          {/* Footer */}
+          <Footer />
         </div>
       </main>
     </>
