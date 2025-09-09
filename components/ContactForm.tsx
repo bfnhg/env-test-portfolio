@@ -11,6 +11,10 @@ interface FormData {
   email: string;
   subject: string;
   message: string;
+  projectType?: string;
+  budget?: string;
+  phone?: string;
+  features?: string;
 }
 
 interface FormErrors {
@@ -27,6 +31,10 @@ const ContactForm = () => {
     email: "",
     subject: "",
     message: "",
+    projectType: "",
+    budget: "",
+    phone: "",
+    features: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,6 +86,14 @@ const ContactForm = () => {
         [name]: undefined
       }));
     }
+  };
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -133,6 +149,46 @@ const ContactForm = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
+        {/* Quote Quick Info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-white mb-2">
+              {t("Project Type")}
+            </label>
+            <select
+              name="projectType"
+              value={formData.projectType}
+              onChange={handleSelectChange}
+              className="w-full px-4 py-3 rounded-lg border-2 bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-purple-500 border-gray-600 hover:border-gray-500"
+            >
+              <option value="" className="bg-slate-900">{t("Select an option")}</option>
+              <option value="Showcase" className="bg-slate-900">{t("Showcase Website")}</option>
+              <option value="E-commerce" className="bg-slate-900">{t("E-commerce")}</option>
+              <option value="SaaS" className="bg-slate-900">{t("SaaS App")}</option>
+              <option value="Redesign" className="bg-slate-900">{t("Redesign")}</option>
+              <option value="Other" className="bg-slate-900">{t("Other")}</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-white mb-2">
+              {t("Budget")}
+            </label>
+            <select
+              name="budget"
+              value={formData.budget}
+              onChange={handleSelectChange}
+              className="w-full px-4 py-3 rounded-lg border-2 bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-purple-500 border-gray-600 hover:border-gray-500"
+            >
+              <option value="" className="bg-slate-900">{t("Select a range")}</option>
+              <option value="< $1k" className="bg-slate-900">{t("Under $1k")}</option>
+              <option value="$1k-$3k" className="bg-slate-900">$1k–$3k</option>
+              <option value="$3k-$8k" className="bg-slate-900">$3k–$8k</option>
+              <option value="> $8k" className="bg-slate-900">{t("Above $8k")}</option>
+            </select>
+          </div>
+         
+        </div>
+
         {/* Name Field */}
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
@@ -189,6 +245,26 @@ const ContactForm = () => {
           )}
         </div>
 
+
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+            {t("Phone Number")} *
+          </label>
+          <input
+             type="tel"
+             id="phone"
+             name="phone"
+             value={formData.phone}
+             onChange={handleInputChange}
+            className={`w-full px-4 py-3 rounded-lg border-2 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200 ${
+              errors.email ? 'border-red-500' : 'border-gray-600 hover:border-gray-500'
+            }`}
+            placeholder={t("Enter your phone number (optional)")}
+            />
+          
+           
+          
+        </div>
         {/* Subject Field */}
         <div>
           <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
@@ -243,6 +319,22 @@ const ContactForm = () => {
               {errors.message}
             </motion.p>
           )}
+        </div>
+
+        {/* Features Field */}
+        <div>
+          <label htmlFor="features" className="block text-sm font-medium text-white mb-2">
+            {t("Key pages or features (optional)")}
+          </label>
+          <textarea
+            id="features"
+            name="features"
+            value={formData.features}
+            onChange={handleInputChange}
+            rows={4}
+            className="w-full px-4 py-3 rounded-lg border-2 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200 resize-none border-gray-600 hover:border-gray-500"
+            placeholder={t("List important pages or features you need (e.g., Home, Pricing, Auth, Admin...)")}
+          />
         </div>
 
         {/* Submit Button */}

@@ -27,6 +27,10 @@ export const sendEmail = async (formData: {
   email: string;
   subject: string;
   message: string;
+  projectType?: string;
+  budget?: string;
+  phone?: string;
+  features?: string;
 }): Promise<{ success: boolean; message: string }> => {
   try {
     const templateParams = {
@@ -35,6 +39,10 @@ export const sendEmail = async (formData: {
       subject: formData.subject,
       message: formData.message,
       to_name: 'Adham', // Votre nom
+      project_type: formData.projectType || '-',
+      budget: formData.budget || '-',
+      phone: formData.phone || '-',
+      features: formData.features || '-',
     };
 
     const serviceId = EMAILJS_CONFIG.SERVICE_ID || "";
