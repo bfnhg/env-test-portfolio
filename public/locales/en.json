@@ -101,6 +101,21 @@
   "Response Time": "Response Time",
   "Usually within 24 hours": "Usually within 24 hours",
   "Follow Me": "Follow Me",
+  "Project Type": "Project Type",
+  "Select an option": "Select an option",
+  "Showcase Website": "Showcase Website",
+  "E-commerce": "E-commerce",
+  "SaaS App": "SaaS App",
+  "Redesign": "Redesign",
+  "Other": "Other",
+  "Budget": "Budget",
+  "Select a range": "Select a range",
+  "Under $1k": "Under $1k",
+  "Above $8k": "Above $8k",
+  "Phone Number": "Phone Number",
+  "Enter your phone number (optional)": "Enter your phone number (optional)",
+  "Key pages or features (optional)": "Key pages or features (optional)",
+  "List important pages or features you need (e.g., Home, Pricing, Auth, Admin...)": "List important pages or features you need (e.g., Home, Pricing, Auth, Admin...)",
   "Copyright": "Copyright adham @ 2025"
 }
 
