@@ -3,14 +3,22 @@ import emailjs from '@emailjs/browser';
 // EmailJS Configuration
 export const EMAILJS_CONFIG = {
   // Utilise les variables d'environnement ou des valeurs par défaut
-  SERVICE_ID: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_xxxxxxx',
-  TEMPLATE_ID: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_xxxxxxx',
-  PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key_here',
+  SERVICE_ID: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ,
+  TEMPLATE_ID: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+  PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ,
 };
 
 // Initialize EmailJS
 export const initEmailJS = () => {
-  emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+  const publicKey = EMAILJS_CONFIG.PUBLIC_KEY || "";
+  // Guard: avoid calling init with undefined
+  if (!publicKey) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn("EmailJS public key is missing. Skipping emailjs.init().");
+    }
+    return;
+  }
+  emailjs.init(publicKey);
 };
 
 // Send email function
@@ -29,11 +37,19 @@ export const sendEmail = async (formData: {
       to_name: 'Adham', // Votre nom
     };
 
+    const serviceId = EMAILJS_CONFIG.SERVICE_ID || "";
+    const templateId = EMAILJS_CONFIG.TEMPLATE_ID || "";
+    const publicKey = EMAILJS_CONFIG.PUBLIC_KEY || "";
+
+    if (!serviceId || !templateId || !publicKey) {
+      throw new Error("EmailJS configuration is missing. Check env variables.");
+    }
+
     const response = await emailjs.send(
-      EMAILJS_CONFIG.SERVICE_ID,
-      EMAILJS_CONFIG.TEMPLATE_ID,
+      serviceId,
+      templateId,
       templateParams,
-      EMAILJS_CONFIG.PUBLIC_KEY
+      publicKey
     );
 
     if (response.status === 200) {
