@@ -4,10 +4,17 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import { companies, testimonials } from "@/data"
-import { TestimonialsGrid } from "./ui/TestimonialsGrid"
+import { AnimatedTestimonials } from "./ui/AnimatedTestimonials"
 
 const Clients = () => {
   const { t } = useTranslation()
+
+  const mappedTestimonials = testimonials.map((item) => ({
+    quote: t(item.quote),
+    name: item.name,
+    designation: t(item.title),
+    src: item.img,
+  }))
 
   return (
     <section id="testimonials" className="py-20">
@@ -17,10 +24,7 @@ const Clients = () => {
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">
-        {/* Testimonials Grid */}
-        <div className="w-full max-w-7xl mx-auto px-4">
-          <TestimonialsGrid items={testimonials} />
-        </div>
+        <AnimatedTestimonials testimonials={mappedTestimonials} />
 
         {/* Spacing */}
         <div className="my-16"></div>

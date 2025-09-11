@@ -106,13 +106,13 @@ export const projects = [
 
 export const testimonials = [
   {
-  quote:"Adham is highly professional",   
+  quote:"Adham is highly professional, responsive, and passionate about delivering quality results. He's the perfect partner to elevate your website and brand",   
    name: "Yvon Day ",
     title: "Conseiller Sénior ITSM",
     img: "/yvon.jpeg",
   },
   {
-    quote:"Adham is a true",
+    quote:"Adham is a true professional—responsive, passionate, and committed to delivering outstanding results. He's the perfect partner to elevate your website and brand.",
     name: "Benoît Godbout",
     img: "/benoit.jpeg",
     title: "Auteur | Entrepreneur, Président de SIRIUS Conseils, Expert en Agilité & Gestion de projets & Intelligence Artificielle | Doctorant en administration des affaires (IA) | Membre du collectif Agilience pour PME",
