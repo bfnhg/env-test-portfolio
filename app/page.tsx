@@ -29,7 +29,7 @@ const Home = () => {
           <FloatingNav navItems={navItems} />
 
           {/* About section */}
-          <section id="about">
+          <section id="about" className="pt-40 md:pt-0">
              <SpotlightPreview /> 
             <Grid /> 
           </section>

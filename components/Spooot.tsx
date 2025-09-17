@@ -19,7 +19,7 @@ export function SpotlightPreview() {
   return (
     <div
       className={cn(
-        "relative flex h-[67rem] w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center"
+        "relative flex h-[67rem] w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center pt-400 md:pt-0"
       )}
     >
       <div
@@ -29,16 +29,16 @@ export function SpotlightPreview() {
         )}
       />
       <Spotlight className="-top-60 left-0 md:-top-40 md:left-80" fill="white" />
-      <div className="relative z-10 mx-auto w-full max-w-7xl p-6 pt-24 md:pt-0">
-        <div className="flex flex-col items-center space-y-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl p-6 pt-24 md:pt-3">
+        <div className="flex flex-col items-center space-y-4">
           {/* Profile Picture */}
-          <div className="relative">
+          <div className="relative mt-8 flex justify-center items-center">
             <div className="h-48 w-48 md:h-60 md:w-60 rounded-full bg-gradient-to-br from-neutral-200 to-neutral-600 p-2">
               <Image
-                src="/img/add.jpeg"
+                src="/img/moi.png"
                 alt="Profile"
-                width={240}
-                height={240}
+                width={200}
+                height={200}
                 className="h-full w-full rounded-full object-cover"
               />
             </div>
@@ -64,7 +64,7 @@ export function SpotlightPreview() {
               {t("a Software Engineer, Based in Morocco")}
             </h3>
             <span className="inline-block align-middle text-4xl md:text-5xl">🇲🇦</span>
-            <div className="mt-3 flex items-center justify-center space-x-3">
+            <div className="mt-8 flex items-center justify-center space-x-3">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-neutral-400"></div>
               <p className="text-xl font-medium text-neutral-300 md:text-2xl">
                 {t("JS Master")}

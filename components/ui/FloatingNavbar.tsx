@@ -33,7 +33,7 @@ export const FloatingNav = ({
   const languages: { code: string; label: string }[] = [
     { code: 'fr', label: 'Français' },
     { code: 'en', label: 'English' },
-    { code: 'ar', label: 'العربية' },
+    
   ];
 
   // Fermer le dropdown si on clique en dehors
