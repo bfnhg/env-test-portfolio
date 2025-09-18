@@ -5,6 +5,7 @@ import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { generatePersonStructuredData, generateWebsiteStructuredData, generatePortfolioStructuredData } from "@/lib/structuredData";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -121,6 +122,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
