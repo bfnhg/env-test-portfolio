@@ -44,7 +44,7 @@ const Experience = () => {
                 loading="lazy"
               />
               <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
+                <h1 className="text-start text-xl md:text-2xl font-bold text-white">
                   {/* {card.title} */}
                {t(card.title)}
 

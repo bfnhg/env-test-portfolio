@@ -80,14 +80,22 @@
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
+    @apply font-bold text-4xl md:text-5xl text-center text-white;
   }
 }
 
-/* Offset sections for FloatingNav */
-#about,
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure about section is always at the top */
+#about {
+  scroll-margin-top: 0 !important;
+}
+
 #projects,
 #testimonials,
 #contact {
-  scroll-margin-top: 120px; /* ajuste selon la vraie hauteur de ta navbar */
+  scroll-margin-top: 80px; /* ajuste selon la vraie hauteur de ta navbar */
 }

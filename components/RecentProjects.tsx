@@ -4,6 +4,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const RecentProjects = () => {
   const { t } = useTranslation();
@@ -28,12 +29,15 @@ const RecentProjects = () => {
                   className="relative w-full h-full overflow-hidden lg:rounded-5xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <img src="/bg.webp" alt="bgimg" loading="lazy" className="w-full h-full object-cover" />
                 </div>
-                <img
+                <Image
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  fill
+                  loading="lazy"
+                  quality={75}
+                  className="z-10 object-contain"
                 />
               </div>
 

@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("./Globe").then((m) => m.World), {
   ssr: false,
+  loading: () => <div className="w-full h-full bg-gradient-to-b from-transparent to-blue-900/20 animate-pulse rounded-lg" />
 });
 
 const GridGlobe = () => {

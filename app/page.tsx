@@ -1,64 +1,75 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { Suspense } from "react";
 import { navItems } from "@/data";
-// import { SpotlightPreview } from "@/components/Spooot"; // Adjust path as needed// import { Hero } from "@/components/Hero";
-// import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
-import Approach from "@/components/Approach";
-import Experience from "@/components/Experience";
-import RecentProjects from "@/components/RecentProjects";
-import Contact from "@/components/Contact";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
-const SpotlightPreview = dynamic(() =>
-  import("@/components/Spooot").then(mod => mod.SpotlightPreview),
+const SectionSkeleton = () => (
+  <div className="w-full min-h-[400px] bg-gradient-to-b from-black-100 to-black animate-pulse rounded-lg" />
+);
+
+// FIX: Move this to the top level
+const FloatingNav = dynamic(() =>
+  import("@/components/ui/FloatingNavbar").then(mod => mod.FloatingNav),
   { ssr: false }
 );
-const Grid = dynamic(() =>
-  import("@/components/Grid").then(mod => mod.default),
-  { ssr: false }
-);
+
+const SpotlightPreview = dynamic(() => import("@/components/Spooot").then(mod => mod.SpotlightPreview), { ssr: false, loading: () => <SectionSkeleton /> });
+const Grid = dynamic(() => import("@/components/Grid").then(mod => mod.default), { ssr: false, loading: () => <SectionSkeleton /> });
+const RecentProjectsLazy = dynamic(() => import("@/components/RecentProjects").then(mod => mod.default), { ssr: false });
+const ClientsLazy = dynamic(() => import("@/components/Clients").then(mod => mod.default), { ssr: false });
+const ExperienceLazy = dynamic(() => import("@/components/Experience").then(mod => mod.default), { ssr: false });
+const ApproachLazy = dynamic(() => import("@/components/Approach").then(mod => mod.default), { ssr: false });
+const ContactLazy = dynamic(() => import("@/components/Contact").then(mod => mod.default), { ssr: false });
 
 const Home = () => {
   return (
-    <>
-      <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-        <div className="max-w-7xl w-full">
-          <FloatingNav navItems={navItems} />
+    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+      {/* FIX: FloatingNav is now a direct child of main with a 
+          high z-index to stay above everything else 
+      */}
+      <Suspense fallback={null}>
+        <FloatingNav navItems={navItems} />
+      </Suspense>
 
-          {/* About section */}
-          <section id="about" className="pt-40 md:pt-0">
-             <SpotlightPreview /> 
+      <div className="max-w-7xl w-full">
+        <section id="about" className="w-full">
+          <Suspense fallback={<SectionSkeleton />}>
+            <SpotlightPreview /> 
+          </Suspense>
+          <Suspense fallback={<SectionSkeleton />}>
             <Grid /> 
-          </section>
+          </Suspense>
+        </section>
 
-          {/* Projects section */}
-          <section id="projects">
-            
-            <RecentProjects />
-          </section>
+        <section id="projects">
+          <Suspense fallback={<SectionSkeleton />}>
+            <RecentProjectsLazy />
+          </Suspense>
+        </section>
 
-          {/* Testimonials section */}
-          <section id="testimonials">
-            <Clients />
-          </section>
+        <section id="testimonials">
+          <Suspense fallback={<SectionSkeleton />}>
+            <ClientsLazy />
+          </Suspense>
+        </section>
 
-          {/* Experience (you could attach to 'about' or keep separate) */}
-          <Experience />
+        <Suspense fallback={<SectionSkeleton />}>
+          <ExperienceLazy />
+        </Suspense>
 
-          {/* Approach section */}
-          <Approach />
+        <Suspense fallback={<SectionSkeleton />}>
+          <ApproachLazy />
+        </Suspense>
 
-          {/* Contact section */}
-          <Contact />
+        <Suspense fallback={<SectionSkeleton />}>
+          <ContactLazy />
+        </Suspense>
 
-          {/* Footer */}
-          <Footer />
-        </div>
-      </main>
-    </>
+        <Footer />
+      </div>
+    </main>
   );
 };
 

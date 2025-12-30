@@ -91,13 +91,14 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={inter.className}>
-        {/* Structured Data */}
+        {/* Structured Data - Lower Priority */}
         <Script
           id="structured-data-person"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generatePersonStructuredData())
           }}
+          strategy="afterInteractive"
         />
         <Script
           id="structured-data-website"
@@ -105,6 +106,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateWebsiteStructuredData())
           }}
+          strategy="afterInteractive"
         />
         <Script
           id="structured-data-portfolio"
@@ -112,6 +114,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generatePortfolioStructuredData())
           }}
+          strategy="afterInteractive"
         />
         
         <ThemeProvider
