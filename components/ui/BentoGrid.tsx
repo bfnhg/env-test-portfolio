@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
@@ -15,9 +15,6 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import dynamic from "next/dynamic";
-
-// Dynamically import SpotlightPreview with SSR disabled
-const SpotlightPreview = dynamic(() => import("@/components/Spooot").then(mod => mod.SpotlightPreview), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -63,6 +60,11 @@ export const BentoGridItem = ({
   const rightLists = ["Flatter", "Express","SQL"];
 
   const [copied, setCopied] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const defaultOptions = {
     loop: copied,
@@ -187,7 +189,7 @@ export const BentoGridItem = ({
                   }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {isMounted && <Lottie options={defaultOptions} height={200} width={400} />}
               </div>
 
               <MagicButton
