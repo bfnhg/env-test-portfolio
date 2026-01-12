@@ -70,12 +70,18 @@ export const gridItems = [
 ];
 
 export const projects = [
-  {
+ {
     id: 1,
     title: "Bleusky",
     des: "BleuSky est la solution pour PME qui vous permet de mesurer et de planifier les risques afin d'assurer votre succès.",
     img: "/BBL.webp",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    techIcons: [
+      { src: "/re.svg",      name: "React",         color: "#61DAFB" },
+      { src: "/tail.svg",    name: "Tailwind CSS",  color: "#38BDF8" },
+      { src: "/ts.svg",      name: "TypeScript",    color: "#3178C6" },
+      { src: "/three.svg",   name: "Three.js" },
+      { src: "/fm.svg",      name: "Framer Motion" },
+    ],
     link: "https://www.linkedin.com/showcase/bleusky-software/about/",
   },
   {
@@ -83,25 +89,47 @@ export const projects = [
     title: "QResto PRO SaaS",
     des: "QResto Pro est un SaaS de gestion restaurant au Maroc, conçu pour les cafés, snacks, pizzerias et restaurants ",
     img: "/qrestopro.webp",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    techIcons: [
+      { src: "/next.svg",    name: "Next.js",       color: "#000000" },
+      { src: "/tail.svg",    name: "Tailwind CSS" },
+      { src: "/ts.svg",      name: "TypeScript" },
+      { src: "/stream.svg",  name: "Stream" },
+      { src: "/c.svg",       name: "C" },           // ← change if it's something else
+    ],
     link: "https://www.qresto.pro/",
   },
   {
     id: 3,
-    title: "AI Image SaaS ",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "Dental Clinic Website",
+    des: "A modern and professional website for a dental clinic, designed to highlight services, showcase the doctor’s expertise, and allow patients to easily book appointments online.",
+    img: "/kariim.png",
+    techIcons: [
+      { src: "/re.svg",      name: "React" },
+      { src: "/tail.svg",    name: "Tailwind CSS" },
+      { src: "/ts.svg",      name: "TypeScript" },
+      { src: "/three.svg",   name: "Three.js" },
+      { src: "/c.svg",       name: "C" },
+    ],
+    link: "https://www.dentalzairi.com/",
   },
   {
     id: 4,
     title: "Agafay Gateway",
     des: "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech.",
     img: "/agafay.webp",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    techIcons: [
+      { src: "/next.svg",    name: "Next.js" },
+      { src: "/tail.svg",    name: "Tailwind CSS" },
+      { src: "/ts.svg",      name: "TypeScript" },
+      { src: "/three.svg",   name: "Three.js" },
+      { src: "/gsap.svg",    name: "GSAP" },
+    ],
+    link: "https://your-real-agafay-link.com", // ← IMPORTANT: change this
   },
+  
+ 
+
+  
 ];
 
 export const testimonials = [
