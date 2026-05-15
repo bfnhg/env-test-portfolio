@@ -114,9 +114,9 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Agafay Gateway",
-    des: "Agafay Gateway is a project focused on promoting the Agafay Desert, located just outside Marrakech.",
-    img: "/agafay.webp",
+    title: "Jerseys",
+    des: "E-commerce de maillots de football, offrant une large sélection de maillots de clubs et d'équipes nationales, avec des options de personnalisation pour les fans passionnés.",
+    img: "/maillots.png",
     techIcons: [
       { src: "/next.svg",    name: "Next.js" },
       { src: "/tail.svg",    name: "Tailwind CSS" },
@@ -124,12 +124,25 @@ export const projects = [
       { src: "/three.svg",   name: "Three.js" },
       { src: "/gsap.svg",    name: "GSAP" },
     ],
-    link: "https://your-real-agafay-link.com", // ← IMPORTANT: change this
+    link: "https://jersey-morocco.vercel.app/", // ← IMPORTANT: change this
   },
-  
- 
 
-  
+
+  {
+    id: 5,
+    title: "Premium Car Marrakech",
+    des: "Agence de location de voitures à Marrakech proposant une large gamme de véhicules modernes et de luxe pour répondre à tous les besoins de mobilité dans la ville.",
+    img: "/location.png",
+    techIcons: [
+      { src: "/next.svg",    name: "Next.js" },
+      { src: "/tail.svg",    name: "Tailwind CSS" },
+      { src: "/ts.svg",      name: "TypeScript" },
+      { src: "/three.svg",   name: "Three.js" },
+      { src: "/gsap.svg",    name: "GSAP" },
+    ],
+    link: "https://premiumcarmarrakech.com/", // ← IMPORTANT: change this
+  },
+ 
 ];
 
 export const testimonials = [

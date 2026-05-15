@@ -23,25 +23,33 @@ export function SpotlightPreview() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 mt-16 sm:mt-20 md:mt-24 lg:mt-28 flex flex-col items-center">
         <div className="flex flex-col items-center space-y-6">
           {/* Image de profil */}
-          <div className="relative flex justify-center items-center mb-4">
-            <div className="h-32 w-32 sm:h-44 sm:w-44 md:h-60 md:w-60 rounded-full bg-gradient-to-br from-neutral-200 to-neutral-600 p-[2px]">
-              <Image
-                src="/img/moi.webp"
-                alt="Profile"
-                width={240}
-                height={240}
-                priority
-                className="h-full w-full rounded-full object-cover"
-              />
-            </div>
-            <div className="absolute bottom-0 right-0 sm:-bottom-2 sm:-right-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 p-1">
-              <div className="rounded-full bg-black p-1 sm:p-1.5 md:p-2">
-                <svg className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-5 md:w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              </div>
-            </div>
-          </div>
+          {/* Image de profil */}
+<div className="relative mb-4 inline-flex">
+  
+  {/* Cercle gradient border */}
+  <div className="h-32 w-32 sm:h-44 sm:w-44 md:h-60 md:w-60 rounded-full bg-gradient-to-br from-neutral-200 to-neutral-600 p-[2px]">
+    <div className="h-full w-full rounded-full overflow-hidden">
+      <Image
+        src="/img/moi.webp"
+        alt="Profile"
+        width={240}
+        height={240}
+        priority
+        className="h-full w-full object-cover object-center"
+      />
+    </div>
+  </div>
+
+  {/* Badge étoile */}
+  <div className="absolute bottom-0 right-0 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 p-1">
+    <div className="rounded-full bg-black p-1 sm:p-1.5 md:p-2">
+      <svg className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-5 md:w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+      </svg>
+    </div>
+  </div>
+
+</div>
 
           {/* Titres */}
           <div className="text-center max-w-4xl px-2">
@@ -49,7 +57,7 @@ export function SpotlightPreview() {
               {t("Hey, I'm Adham")}
             </h2>
             <h3 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold text-transparent mt-2">
-              {t("a Software Engineer, Based in Morocco ")}
+              {t("a Software Engineer, Based in France")}
             </h3>
           </div>
 
